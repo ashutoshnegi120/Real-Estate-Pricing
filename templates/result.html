@@ -1,0 +1,45 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+  <div class="container" style="max-width: 800%; flex-direction: row;">
+    <style>
+      a[type="a"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 20px;
+        transition: background-color 0.5s ease-out;
+  
+      }
+  
+      a[type="a"]:hover {
+        background-color: orange;
+      }
+    </style>
+    <h2>Property Details</h2>
+    <div class="left-column">
+      <h3>Area : {{info.area}}</h3> 
+      <h3>BHK : {{info.bhk}}</h3> 
+      <h3>Bathroom : {{info.Bathroom}}</h3> 
+      <h3>Furnishing : {{info.Furnishing}}</h3> 
+      <h3>Locality : {{info.Locality}}</h3> 
+      <h3>Parking : {{info.Parking}}</h3> 
+      <h3>Status : {{info.Status}}</h3> 
+      <h3>Transaction : {{info.Transaction}} </h3> 
+      <h3>Type : {{info.Type}}</h3> 
+
+      {% for i in data %}
+      <h3>Price :  ₹ {{i}}</h3> 
+      {% endfor %}
+      <br>
+      <br>
+      <a type='a' href="/download" class="btn btn-primary">Download Data</a>
+    </div>
+  </div>
+{% endblock %}
+

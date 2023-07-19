@@ -1,0 +1,55 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+    <style>
+        .container {
+            max-width: 1400px;
+        }
+    </style>
+  <div class="container" >
+    <h1>ML Project - House Price Prediction</h1>
+
+    <h2>Overview</h2>
+    <p>This ML project focuses on predicting house prices using various techniques. The goal is to develop a model that accurately estimates the prices of houses based on different features and variables. Several machine learning algorithms and methodologies are employed to achieve this objective.</p>
+
+    <h2>Techniques Used</h2>
+    <ul>
+      <li>
+        <strong>Linear Regression (LR):</strong> Linear regression is a widely used algorithm for predicting house prices. It establishes a linear relationship between the input features and the target variable (house prices) to make predictions. Here's an example of how to implement linear regression in Python:
+        <br>
+        ```python from sklearn.linear_model import LinearRegression
+        <br>
+        # Assuming X_train and y_train are the training data 
+        <h3>lr = LinearRegression() </h3> 
+        <h3>lr.fit(X_train, y_train)</h3> 
+        <h3>  y_pred_lr = lr.predict(X_test) </h3>
+      </li>
+      <li>
+        <strong>Lasso:</strong> Lasso regression is utilized as a technique to handle outliers and improve model performance. It adds a penalty term to the regression model, encouraging sparse solutions and effectively reducing the impact of outliers. Here's an example of how to implement Lasso regression in Python:
+        <br>
+        ```python from sklearn.linear_model import Lasso
+        <br>
+        # Assuming X_train and y_train are the training data 
+        <h3>lasso = Lasso(alpha=0.1)</h3>  <h3>lasso.fit(X_train, y_train)</h3> <h3>y_pred_lasso = lasso.predict(X_test) </h3>
+      </li>
+      <li>
+        <strong>Z-score:</strong> Z-score is a statistical method used to identify and handle outliers in the dataset. By calculating the z-scores of individual data points, we can identify data points that deviate significantly from the mean. Here's an example of how to calculate and handle outliers using Z-score in Python:
+        <br>
+        ```python import numpy as np
+        <br>
+        # Assuming 'data' is a NumPy array or a pandas DataFrame <h3> z_scores = np.abs((data - np.mean(data)) / np.std(data))</h3>  <h3>threshold = 3 filtered_data = data[z_scores < threshold] </h3>
+      </li>
+      <br>
+      <br>
+    </ul>
+    
+    <h2>Evaluation Metric</h2>
+    <p>The R2 score is employed as an evaluation metric for assessing the performance of the house price prediction model. R2 score measures the proportion of the variance in the target variable (house prices) that can be explained by the input features. A higher R2 score indicates a better fit of the model to the data and better predictive performance.</p>
+
+    <p>Here's an example of how to calculate the R2 score using scikit-learn in Python:
+
+      ```python from sklearn.metrics import r2_score
+
+      # Assuming y_true and y_pred are the true and predicted values r2 = r2_score(y_true, y_pred) print(f"R2 Score: {r2}") ```</p>
+  </div>
+{% endblock %}

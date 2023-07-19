@@ -1,0 +1,2 @@
+Area	BHK	Bathroom	Furnishing	Locality	Parking	Status	Transaction	Type	price
+400.0	3	2.0	Semi-Furnished	J R Designers Floors, Rohini Sector 24	1.0	Almost_ready	New_Property	Apartment	1558735.0

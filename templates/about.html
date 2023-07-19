@@ -1,0 +1,60 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+    <style>
+        .container {
+            max-width: 1400px;
+            margin-top: 40%;
+        }
+    </style>
+  <div class="container" >
+
+
+<style>
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .containerIN {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .download-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .download-link:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+
+<div class="containerIN" >
+    <h1>About ML Project</h1>
+    <p>
+        ML Project is a machine learning project aimed at predicting house prices using various techniques and algorithms. Our goal is to develop accurate models that provide valuable insights into the real estate market.
+    </p>
+    <p>
+        The project utilizes machine learning algorithms such as Linear Regression, Lasso, and techniques like Z-score for outlier handling. These methodologies enable us to build robust models for accurate price predictions.
+    </p>
+    <p>
+        The source code for this project is available on our Git repository. Feel free to download and explore it. You can find the repository at the following link:
+    </p>
+    <p>
+        <a class="download-link" href="https://github.com/ashutoshnegi120/lane-detection-project">Download Source Code</a>
+    </p>
+</div>
+</div>
+{% endblock %}
